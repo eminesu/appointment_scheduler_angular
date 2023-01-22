@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+<div class="row">
+
+  <div class="btn-group">
+    <button type="button" class="btn btn-link" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate"><i
+      class="bi bi-chevron-left" style="align:right; font-size: 30px"></i></button>
+    <img type="button" src="../assets/img_avatar.png" alt="Avatar" style="margin: 10px"
+         (click)="setView(CalendarView1, 'one')">
+    <img type="button" src="../assets/img_avatar2.png" alt="Avatar" style="margin: 10px"
+         (click)="setView(CalendarView2, 'two')">
+    <button type="button" class="btn btn-link" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate"><i
+      class="bi bi-chevron-right" style="align:left;  font-size: 30px"></i></button>
+  </div>
+  <div [ngSwitch]="view">
+    <mwl-calendar-week-view *ngSwitchCase="view" [viewDate]="viewDate" [events]="events"
+                            (hourSegmentClicked)="segmentClicked($event.date)">
+    </mwl-calendar-week-view>
+  </div>
+
+</div>
+
+
+<ng-template #popupAppointmentConfirmation>
+  <div class="pop-up">
+    <div class="col">
+      <p style="margin: 10px">From here you can book an appointment</p>
+      <div class="mb-2">
+        <input matInput
+               placeholder="Event Description"
+               formControlName="description">
+      </div>
+      <span class="btn btn-primary mb-1" (click)="close()">Confirm</span>
+    </div>
+  </div>
+</ng-template>

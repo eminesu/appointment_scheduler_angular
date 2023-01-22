@@ -1,0 +1,11 @@
+.cal-day-column {
+  background-image: linear-gradient(135deg, #e8e3e3 25%, #d9d5d5 25%, #d9d5d5 50%, #e8e3e3 50%, #e8e3e3 75%, #d9d5d5 75%, #d9d5d5 100%);
+}
+img {
+  border-radius: 50%;
+  height: 70px;
+}
+.pop-up {
+  text-align: center;
+  align-items: center;
+}
