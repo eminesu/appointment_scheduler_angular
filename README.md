@@ -1,30 +1,44 @@
-﻿
-## Appointment Scheduler
+# Appointment Scheduler (Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
+![Angular](https://img.shields.io/badge/Angular-15-DD0031?style=flat&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![Angular Material](https://img.shields.io/badge/Angular%20Material-757de8?style=flat&logo=angular&logoColor=white)
 
-## Development server
+A doctor **appointment scheduler** single-page app built with Angular 15. It shows an interactive
+calendar where appointments can be viewed and booked, with an Angular Material dialog confirming
+each booking.
 
-Before running the project, run `npm install` to install the packages needed for the project and included in package.json file.
+> 📅 **One of my earlier projects — original, authored-by-hand code, built in January 2023 and
+> preserved here exactly as originally written** (no later changes to the source).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- Interactive calendar with **day / week / month** views (`angular-calendar`)
+- Book appointments through an **Angular Material** confirmation dialog
+- Appointment data model grouping a doctor with their list of appointments
+- **Bootstrap 5** styling and **FontAwesome** icons
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Tech stack
+
+Angular 15 · TypeScript · Angular Material · angular-calendar · Bootstrap · date-fns
+
+## Run locally
+
+Install the dependencies from `package.json`, then start the dev server:
+
+```bash
+npm install
+ng serve
+```
+
+Navigate to <http://localhost:4200/>; the app reloads automatically on source changes.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+ng build   # build artifacts are written to dist/
+```
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+*Built by [Emine Şevval Eş Uzunay](https://www.linkedin.com/in/eminesevvalesuzunay).*
